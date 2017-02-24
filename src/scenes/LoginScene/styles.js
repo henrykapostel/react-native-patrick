@@ -1,4 +1,7 @@
 import { StyleSheet } from 'react-native';
+import Dimensions from 'Dimensions';
+
+const window = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
@@ -42,5 +45,16 @@ export default StyleSheet.create({
     paddingRight: 7,
     paddingTop: 10,
     paddingBottom: 7,
-  }
+  },
+  loadingScene: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: window.width,
+    height: window.height,
+    alignSelf: 'stretch',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

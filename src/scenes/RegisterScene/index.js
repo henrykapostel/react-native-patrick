@@ -31,7 +31,8 @@ class RegisterScene extends Component {
     SignUp(this.email, this.password, this.confirmPassword, this.firstName, this.lastName, this.phoneNumber)
       .then((response) => {
         if (!response) {
-          Alert.alert("Registered Successfully!");
+//          Alert.alert("Registered Successfully!");
+          this.props.popBack();
         } else {
           Alert.alert(response.message);
         }
